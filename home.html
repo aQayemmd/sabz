@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>نوبار فروشگاهی کافه‌نو</title>
+  
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Swiper CSS (اضافه شده) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  
+  <!-- استایل‌های اختصاصی شما -->
+  <link rel="stylesheet" href="./styleHome.css">
+</head>
+<body>
+
+  <!-- ================= نوبار ================= -->
+  <nav class="navbar">
+    <div class="nav-right-group">
+      <a href="#" class="nav-logo">کافه‌نو</a>
+      <ul class="nav-links">
+        <li><a href="#">صفحه اصلی</a></li>
+        <li><a href="#">منو محصولات</a></li>
+        <li><a href="#">درباره ما</a></li>
+        <li><a href="#">تماس با ما</a></li>
+      </ul>
+    </div>
+    <div class="nav-icons">
+      <a href="#" title="سبد خرید"><i class="fa-solid fa-cart-shopping"></i></a>
+      <a href="#" title="ورود / ثبت‌نام"><i class="fa-solid fa-user"></i></a>
+      <div class="menu-toggle" id="menuToggle">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- منوی موبایل -->
+  <div class="overlay" id="overlay"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <i class="fa-solid fa-xmark close-menu" id="closeMenu"></i>
+    <a href="#"><i class="fa-solid fa-house"></i> صفحه اصلی</a>
+    <a href="#"><i class="fa-solid fa-mug-hot"></i> منو محصولات</a>
+    <a href="#"><i class="fa-solid fa-info-circle"></i> درباره ما</a>
+    <a href="#"><i class="fa-solid fa-phone"></i> تماس با ما</a>
+  </div>
+
+  <!-- ================= هیرو سکشن ================= -->
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-sidebar">
+        <div class="departments">
+          <div class="departments-header" id="deptToggle">
+            <i class="fa-solid fa-bars"></i>
+            <span>همه دسته‌بندی‌ها</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <ul class="departments-list" id="deptList">
+            <li><a href="#">گوشت تازه</a></li>
+            <li><a href="#">سبزیجات</a></li>
+            <li><a href="#">هدایای میوه و آجیل</a></li>
+            <li><a href="#">توت‌های تازه</a></li>
+            <li><a href="#">غذاهای دریایی</a></li>
+            <li><a href="#">کره و تخم‌مرغ</a></li>
+            <li><a href="#">فست فود</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="hero-main">
+        <div class="hero-top">
+          <div class="hero-search">
+            <input type="text" placeholder="به چه چیزی نیاز دارید؟">
+            <button type="button">جستجو</button>
+          </div>
+          <div class="hero-phone">
+            <div class="phone-text">
+              <strong>+98 937 526 8384</strong>
+              <span>پشتیبانی ۲۴ ساعته</span>
+            </div>
+            <div class="phone-icon">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+          </div>
+        </div>
+        <div class="hero-banner">
+          <img src="./image/67ca0149-a02c-4d04-9165-b8badad71236.png" alt="بنر کافه">
+          <div class="banner-content">
+            <span class="banner-subtitle">میوه تازه</span>
+            <h2 class="banner-title">سبزیجات<br>۱۰۰٪ ارگانیک</h2>
+            <p class="banner-text">امکان دریافت حضوری و ارسال رایگان</p>
+            <a href="#" class="banner-btn">همین حالا خرید کنید</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= اسلایدر دسته‌بندی‌ها (دقیقاً مشابه عکس) ================= -->
+  <section class="category-slider-section">
+    <div class="category-container">
+      
+      <!-- دکمه‌های ناوبری (بیرون از اسلایدر) -->
+       <div class="swiper-button-prev category-btn-prev"></div>
+      <div class="swiper-button-next category-btn-next"></div>
+      
+
+      <div class="swiper categorySwiper">
+        <div class="swiper-wrapper">
+          
+          <!-- اسلاید ۱ -->
+          <div class="swiper-slide">
+            <div class="category-card">
+              <img src="./image/slide-item/cat-2.jpg" alt="میوه تازه">
+              <div class="category-title">میوه‌ تازه</div>
+            </div>
+          </div>
+
+          <!-- اسلاید ۲ -->
+          <div class="swiper-slide">
+            <div class="category-card">
+              <img src="./image/slide-item/cat-2.jpg" alt="میوه خشک">
+              <div class="category-title">میوه خشک</div>
+            </div>
+          </div>
+
+          <!-- اسلاید ۳ -->
+          <div class="swiper-slide">
+            <div class="category-card">
+              <img src="./image/slide-item/cat-3.jpg" alt="سبزیجات">
+              <div class="category-title">سبزیجات</div>
+            </div>
+          </div>
+
+          <!-- اسلاید ۴ -->
+          <div class="swiper-slide">
+            <div class="category-card">
+              <img src="./image/slide-item/cat-4.jpg" alt="نوشیدنی">
+              <div class="category-title">نوشیدنی میوه‌ای</div>
+            </div>
+          </div>
+          
+          <!-- اسلاید ۵ (برای تست کارکرد دکمه‌ها) -->
+          <div class="swiper-slide">
+            <div class="category-card">
+              <img src="./image/slide-item/cat-5.jpg" alt="موز">
+              <div class="category-title">موز تازه</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!-- بخش محصولات -->
+<section class="products-section">
+  <div class="products-container">
+    
+    <!-- تیتر بخش -->
+    <div class="section-header">
+      <h2>محصولات ویژه</h2>
+      <div class="underline"></div>
+    </div>
+
+    <!-- تب‌های فیلتر محصولات -->
+    <ul class="product-filters">
+      <li class="active">همه</li>
+      <li> گرم</li>
+      <li> سرد</li>
+      <li>کیک و دسر</li>
+      <li>فست فود</li>
+    </ul>
+
+    <!-- گرید کارت‌های محصولات -->
+    <div class="products-grid">
+      
+      <!-- ۱ -->
+      <div class="product-card">
+        <div class="product-image"><img src="./image/prodouct-item/pn1.png" alt="محصول"></div>
+        <div class="product-info">
+          <h3 class="product-title">لاته آرت</h3>
+          <span class="product-price">۸۵,۰۰۰ تومان</span>
+          <a href="#" class="view-btn">مشاهده محصول</a>
+        </div>
+      </div>
+
+      <!-- ۲ -->
+      <div class="product-card">
+        <div class="product-image"><img src="your-image.png" alt="محصول"></div>
+        <div class="product-info">
+          <h3 class="product-title">کیک شکلاتی دبل</h3>
+          <span class="product-price">۱۲۰,۰۰۰ تومان</span>
+          <a href="#" class="view-btn">مشاهده محصول</a>
+        </div>
+      </div>
+
+      <!-- ۳ -->
+      <div class="product-card">
+        <div class="product-image"><img src="your-image.png" alt="محصول"></div>
+        <div class="product-info">
+          <h3 class="product-title">اسموتی استوایی</h3>
+          <span class="product-price">۹۵,۰۰۰ تومان</span>
+          <a href="#" class="view-btn">مشاهده محصول</a>
+        </div>
+      </div>
+
+      <!-- ۴ -->
+      <div class="product-card">
+        <div class="product-image"><img src="your-image.png" alt="محصول"></div>
+        <div class="product-info">
+          <h3 class="product-title">پاستا آلفردو</h3>
+          <span class="product-price">۲۱۰,۰۰۰ تومان</span>
+          <a href="#" class="view-btn">مشاهده محصول</a>
+        </div>
+      </div>
+
+      <!-- ۵ -->
+      <div class="product-card">
+        <div class="product-image"><img src="your-image.png" alt="محصول"></div>
+        <div class="product-info">
+          <h3 class="product-title">کاپوچینو کلاسیک</h3>
+          <span class="product-price">۸۰,۰۰۰ تومان</span>
+          <a href="#" class="view-btn">مشاهده محصول</a>
+        </div>
+      </div>
+
+      <!-- ۶ -->
+      <div class="product-card">
+        <div class="product-image"><img src="your-image.png" alt="محصول"></div>
+        <div class="product-info">
+          <h3 class="product-title">چیزکیک نیویورکی</h3>
+          <span class="product-price">۱۱۰,۰۰۰ تومان</span>
+          <a href="#" class="view-btn">مشاهده محصول</a>
+        </div>
+      </div>
+
+      <!-- ۷ -->
+      <div class="product-card">
+        <div class="product-image"><img src="your-image.png" alt="محصول"></div>
+        <div class="product-info">
+          <h3 class="product-title">موکا فراپه</h3>
+          <span class="product-price">۹۰,۰۰۰ تومان</span>
+          <a href="#" class="view-btn">مشاهده محصول</a>
+        </div>
+      </div>
+
+      <!-- ۸ -->
+      <div class="product-card">
+        <div class="product-image"><img src="your-image.png" alt="محصول"></div>
+        <div class="product-info">
+          <h3 class="product-title">پیتزا پپرونی</h3>
+          <span class="product-price">۲۴۰,۰۰۰ تومان</span>
+          <a href="#" class="view-btn">مشاهده محصول</a>
+        </div>
+      </div>
+
+      <!-- ۹ -->
+      <div class="product-card">
+        <div class="product-image"><img src="your-image.png" alt="محصول"></div>
+        <div class="product-info">
+          <h3 class="product-title">اسپرسو سینگل</h3>
+          <span class="product-price">۵۰,۰۰۰ تومان</span>
+          <a href="#" class="view-btn">مشاهده محصول</a>
+        </div>
+      </div>
+
+      <!-- ۱۰ -->
+      <div class="product-card">
+        <div class="product-image"><img src="your-image.png" alt="محصول"></div>
+        <div class="product-info">
+          <h3 class="product-title">وافل نوتلا و توت‌فرنگی</h3>
+          <span class="product-price">۱۳۰,۰۰۰ تومان</span>
+          <a href="#" class="view-btn">مشاهده محصول</a>
+        </div>
+      </div>
+
+      <!-- ۱۱ -->
+      <div class="product-card">
+        <div class="product-image"><img src="your-image.png" alt="محصول"></div>
+        <div class="product-info">
+          <h3 class="product-title">شیک بادام زمینی</h3>
+          <span class="product-price">۱۰۰,۰۰۰ تومان</span>
+          <a href="#" class="view-btn">مشاهده محصول</a>
+        </div>
+      </div>
+
+      <!-- ۱۲ -->
+      <div class="product-card">
+        <div class="product-image"><img src="your-image.png" alt="محصول"></div>
+        <div class="product-info">
+          <h3 class="product-title">سالاد سزار</h3>
+          <span class="product-price">۱۸۰,۰۰۰ تومان</span>
+          <a href="#" class="view-btn">مشاهده محصول</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- بخش بنرهای تبلیغاتی -->
+<section class="promo-banners">
+  <div class="promo-container">
+    <div class="promo-grid">
+      
+      <!-- بنر اول -->
+      <a href="#" class="promo-card">
+        <img src="./image/banner/banner-v1.jpg" alt="بنر تخفیف اول" />
+      </a>
+
+      <!-- بنر دوم -->
+      <a href="#" class="promo-card">
+        <img src="./image/banner/banner-v2.jpg" alt="بنر تخفیف دوم" />
+      </a>
+
+    </div>
+  </div>
+</section>
+
+  <!-- بخش آخرین مقالات وبلاگ -->
+<section class="blog-section">
+  <div class="blog-container">
+    
+    <!-- عنوان بخش -->
+    <div class="section-title">
+      <h2>از وبلاگ ما</h2>
+    </div>
+
+    <div class="blog-grid">
+      
+      <!-- مقاله اول -->
+      <article class="blog-card">
+        <a href="#" class="blog-img-wrap">
+          <img src="./image/New folder/blog4.png" alt="مقاله اول" />
+        </a>
+        <div class="blog-content">
+          <div class="blog-meta">
+            <!-- آیکون تقویم (SVG یا FontAwesome) -->
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            <span>۱۰ تیر ۱۴۰۵</span>
+          </div>
+          <h3 class="blog-title">
+            <a href="#">نکات کلیدی برای تهیه یک قهوه اسپرسوی بی‌نقص در خانه</a>
+          </h3>
+          <p class="blog-excerpt">
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است...
+          </p>
+        </div>
+      </article>
+
+      <!-- مقاله دوم -->
+      <article class="blog-card">
+        <a href="#" class="blog-img-wrap">
+          <img src="./image/New folder/blog2.png" alt="مقاله دوم" />
+        </a>
+        <div class="blog-content">
+          <div class="blog-meta">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            <span>۰۵ تیر ۱۴۰۵</span>
+          </div>
+          <h3 class="blog-title">
+            <a href="#">۶ روش خلاقانه برای سرو صبحانه سالم در کافه</a>
+          </h3>
+          <p class="blog-excerpt">
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است...
+          </p>
+        </div>
+      </article>
+
+      <!-- مقاله سوم -->
+      <article class="blog-card">
+        <a href="#" class="blog-img-wrap">
+          <img src="./image/New folder/blog5.png" alt="مقاله سوم" />
+        </a>
+        <div class="blog-content">
+          <div class="blog-meta">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            <span>۲۸ خرداد ۱۴۰۵</span>
+          </div>
+          <h3 class="blog-title">
+            <a href="#">آشنایی با بهترین مزارع کشت قهوه در جهان</a>
+          </h3>
+          <p class="blog-excerpt">
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است...
+          </p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer-section">
+  <div class="footer-container">
+    <div class="footer-row">
+
+      <!-- ستون اول: اطلاعات تماس و لوگو -->
+      <div class="footer-about">
+        <div class="footer-logo">
+          <a href="#">
+            <!-- می‌توانید تگ img لوگوی خود را اینجا بگذارید. فعلا متن جایگزین شده است -->
+            <h2><span class="text-green">کافه</span>‌نو</h2>
+          </a>
+        </div>
+        <ul>
+          <li>آدرس: تهران، خیابان ولیعصر، پلاک ۱۲۳</li>
+          <li>تلفن: ۰۲۱-۱۲۳۴۵۶۷۸</li>
+          <li>ایمیل: info@kafeno.com</li>
+        </ul>
+      </div>
+
+      <!-- ستون دوم: لینک‌های مفید -->
+      <div class="footer-widget">
+        <h6>لینک‌های مفید</h6>
+        <div class="footer-links">
+          <!-- ستون راست لینک‌ها -->
+          <ul>
+            <li><a href="#">درباره ما</a></li>
+            <li><a href="#">درباره فروشگاه ما</a></li>
+            <li><a href="#">خرید امن</a></li>
+            <li><a href="#">اطلاعات ارسال</a></li>
+            <li><a href="#">حریم خصوصی</a></li>
+            <li><a href="#">نقشه سایت</a></li>
+          </ul>
+          <!-- ستون چپ لینک‌ها -->
+          <ul>
+            <li><a href="#">ما کی هستیم</a></li>
+            <li><a href="#">خدمات ما</a></li>
+            <li><a href="#">پروژه‌ها</a></li>
+            <li><a href="#">تماس با ما</a></li>
+            <li><a href="#">نوآوری</a></li>
+            <li><a href="#">نظرات مشتریان</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ستون سوم: خبرنامه و شبکه‌های اجتماعی -->
+      <div class="footer-newsletter">
+        <h6>هم‌اکنون در خبرنامه ما عضو شوید</h6>
+        <p>از آخرین محصولات و تخفیف‌های ویژه ما در ایمیل خود باخبر شوید.</p>
+        <form action="#">
+          <input type="email" placeholder="ایمیل خود را وارد کنید" />
+          <button type="submit" class="site-btn">عضویت</button>
+        </form>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Swiper JS (اضافه شده) -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- فایل JS شما -->
+  <script src="./jsHome.js"></script>
+</body>
+</html>
