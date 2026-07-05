@@ -1,0 +1,221 @@
+/* ============================= */
+/* --- صفحه ورود / ثبت‌نام --- */
+/* ============================= */
+
+:root {
+  --primary-green: #477403;  /* سبز پخته‌تر و مات‌تر که چشم را نمی‌زند */
+  --text-dark: #355800;      /* بدون تغییر (سبز بسیار تیره برای متن) */
+  --hover-green: #3b6300;    /* یک درجه تیره‌تر از رنگ اصلی برای هاور */
+  --bg-color: #f8fafc;       /* بدون تغییر (پس‌زمینه) */
+  --surface-white: #FFFFFF;  /* بدون تغییر (رنگ کارت‌ها) */
+  --admin-blue: #2f6690;     /* رنگ اختصاصی لیبل و آواتار پاسخ مدیریت */
+}
+  @font-face {
+    font-family: irt;
+    src: url(./woff/Dana-Medium.woff);
+  }
+  @font-face {
+    font-family: irt2;
+    src: url(./woff/Dana-Black.woff);
+  }
+    @font-face {
+    font-family: irtprice;
+    src: url(./woff/Dana-Regular.woff);
+  }
+input, textarea, select {
+  font-size: 16px !important;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: irt;
+}
+
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-color);
+    padding: 20px;
+    
+}
+
+.login-card {
+    width: 400px;
+    background-color: var(--surface-white);
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    padding: 28px 26px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.login-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+}
+
+.login-logo img {
+    height: 28px;
+    display: block;
+}
+
+.back-arrow {
+    color: var(--text-dark);
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.back-arrow:hover {
+    color: var(--primary-green);
+}
+
+.login-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+    text-align: right;
+    font-family: irt2;
+    line-height: 1.5;
+    font-family: irt2;
+}
+
+.login-subtitle {
+    font-size: 12.5px;
+    color: #999;
+    margin-bottom: 18px;
+    text-align: right;
+    line-height: 1.7;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.login-input {
+    width: 100%;
+    height: 48px;
+    background-color: var(--surface-white);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0 14px;
+    font-family: inherit;
+    color: var(--text-dark);
+    text-align: right;
+    box-sizing: border-box;
+    transition: border-color 0.25s ease;
+}
+
+.login-input:focus {
+    outline: none;
+    border-color: var(--primary-green);
+}
+
+.login-input::placeholder {
+    color: #b0b0b0;
+    font-size: 12.5px;
+}
+
+.login-submit-btn {
+    width: 100%;
+    height: 44px;
+    background-color: var(--primary-green);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 13.5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-submit-btn:hover {
+    background-color: var(--hover-green);
+}
+
+.login-terms {
+    text-align: center;
+    font-size: 11px;
+    color: #999;
+    line-height: 1.8;
+    
+}
+
+.login-terms a {
+    color: var(--primary-green);
+    text-decoration: none;
+}
+
+.login-terms a:hover {
+    text-decoration: underline;
+}
+
+/* ========================================= */
+/* --- ریسپانسیو تبلت --- */
+/* ========================================= */
+@media (max-width: 768px) {
+    .login-card {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+/* ========================================= */
+/* --- ریسپانسیو موبایل --- */
+/* ========================================= */
+@media (max-width: 480px) {
+    .login-page {
+        padding: 15px;
+        align-items: flex-start;
+        padding-top: 60px;
+    }
+
+    .login-card {
+        width: 100%;
+        max-width: 100%;
+        padding: 24px 20px;
+        box-shadow: none;
+        border: none;
+        margin-top: 35%;
+    }
+
+    .login-title {
+        font-size: 15px;
+    }
+}
+
+.account-alert {
+    display: flex;
+    flex-direction: row-reverse; /* آیکون سمت راست شروع شود */
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    background-color: #fff4e5;
+    color: #a35b00;
+    border: 1px solid #ffe0b2;
+    border-radius: 4px;
+    padding: 12px 14px;
+    font-size: 12.5px;
+    margin-bottom: 16px;
+    text-align: right;
+}
+.account-alert a {
+    color: var(--primary-green);
+    font-weight: bold;
+    text-decoration: none;
+    font-family: irt2;
+    font-size: 9.75px;
+}
+
+.account-alert a:hover {
+    text-decoration: underline;
+}
