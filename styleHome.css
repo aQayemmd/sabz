@@ -20,15 +20,15 @@ input, textarea, select {
 
   @font-face {
     font-family: irt;
-    src: url(./font/Dana/Dana/Webfonts/woff/Dana-Medium.woff);
+    src: url(./woff/Dana-Medium.woff);
   }
   @font-face {
     font-family: irt2;
-    src: url(./font/Dana/Dana/Webfonts/woff/Dana-Black.woff);
+    src: url(./woff/Dana-Black.woff);
   }
     @font-face {
     font-family: irtprice;
-    src: url(./font/Dana/Dana/Webfonts/woff/Dana-Regular.woff);
+    src: url(./woff/Dana-Regular.woff);
   }
     body {
       background-color: var(--bg-color);
