@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Swiper CSS (اضافه شده) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  
+  <!-- استایل‌های اختصاصی شما -->
+  <link rel="stylesheet" href="./register.css">
+</head>
+<body>
+    <div class="login-page">
+    <div class="login-card register-card">
+
+       <div class="login-header">
+    <a href="#" class="back-arrow" title="بازگشت">
+        <i class="fa-solid fa-arrow-right"></i>
+    </a>
+    <a href="#" class="login-logo">
+        <img src="./image/logo.png" alt="آبان بیوتیک">
+    </a>
+</div>
+
+        <h1 class="login-title">ثبت‌نام در آبان بیوتیک</h1>
+        <p class="login-subtitle">برای خرید از فروشگاه، اطلاعات زیر را تکمیل کنید</p>
+
+        <form class="login-form">
+
+            <div class="form-field-row register-name-row">
+                <div class="form-field">
+                    <label class="field-label">نام</label>
+                    <input type="text" class="login-input" placeholder="نام" required>
+                </div>
+                <div class="form-field">
+                    <label class="field-label">نام خانوادگی</label>
+                    <input type="text" class="login-input" placeholder="نام خانوادگی" required>
+                </div>
+            </div>
+
+            <div class="form-field">
+                <label class="field-label">
+                    شماره موبایل
+                    <i class="fa-solid fa-circle-info field-hint-icon" title="شماره موبایل باید با ۰۹ شروع شود"></i>
+                </label>
+                <input type="tel" class="login-input" placeholder="۰۹xxxxxxxxx" required>
+            </div>
+
+            <div class="form-field">
+                <label class="field-label">آدرس ایمیل <span class="optional-tag">(اختیاری)</span></label>
+                <input type="email" class="login-input" placeholder="ایمیل خود را وارد کنید">
+            </div>
+
+            <div class="form-field">
+                <label class="field-label">
+                    رمز عبور
+                    <i class="fa-solid fa-circle-info field-hint-icon" title="حداقل ۸ کاراکتر و شامل حروف و عدد"></i>
+                </label>
+                <input type="password" class="login-input" placeholder="رمز عبور" required>
+            </div>
+
+            <div class="form-field">
+                <label class="field-label">
+                    تکرار رمز عبور
+                    <i class="fa-solid fa-circle-info field-hint-icon" title="باید با رمز عبور بالا یکسان باشد"></i>
+                </label>
+                <input type="password" class="login-input" placeholder="تکرار رمز عبور" required>
+            </div>
+
+            <button type="submit" class="login-submit-btn">ثبت‌نام در آبان بیوتیک</button>
+
+        </form>
+
+    
+        <p class="switch-auth-link">
+            قبلاً ثبت‌نام کرده‌اید؟ <a href="./login.html">ورود به حساب</a>
+        </p>
+
+    </div>
+</div>
+</body>
+</html>
