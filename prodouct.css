@@ -7,14 +7,19 @@
   --admin-blue: #2f6690;     /* رنگ اختصاصی لیبل و آواتار پاسخ مدیریت */
 }
 
-@font-face {
-  font-family: irt;
-  src: url(./font/Dana/Dana/Webfonts/woff/Dana-Medium.woff);
-}
-@font-face {
-  font-family: irt2;
-  src: url(./font/Dana/Dana/Webfonts/woff/Dana-Black.woff);
-}
+
+  @font-face {
+    font-family: irt;
+    src: url(./woff/Dana-Medium.woff);
+  }
+  @font-face {
+    font-family: irt2;
+    src: url(./woff/Dana-Black.woff);
+  }
+    @font-face {
+    font-family: irtprice;
+    src: url(./woff/Dana-Regular.woff);
+  }
 
 input, textarea, select {
   font-size: 16px !important;
