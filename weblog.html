@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./weblog.css">
+
+      
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Swiper CSS (اضافه شده) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  
+  <script src="./weblog.js" defer></script>
+
+</head>
+<body>
+    
+
+  <!-- ================= نوبار ================= -->
+  <nav class="navbar">
+    <div class="nav-right-group">
+      <a href="#" class="nav-logo">کافه‌نو</a>
+      <ul class="nav-links">
+        <li><a href="#">صفحه اصلی</a></li>
+        <li><a href="#">منو محصولات</a></li>
+        <li><a href="#">درباره ما</a></li>
+        <li><a href="#">تماس با ما</a></li>
+      </ul>
+    </div>
+    <div class="nav-icons">
+      <a href="#" title="سبد خرید"><i class="fa-solid fa-cart-shopping"></i></a>
+      <a href="#" title="ورود / ثبت‌نام"><i class="fa-solid fa-user"></i></a>
+      <div class="menu-toggle" id="menuToggle">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- منوی موبایل -->
+  <div class="overlay" id="overlay"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <i class="fa-solid fa-xmark close-menu" id="closeMenu"></i>
+    <a href="#"><i class="fa-solid fa-house"></i> صفحه اصلی</a>
+    <a href="#"><i class="fa-solid fa-mug-hot"></i> منو محصولات</a>
+    <a href="#"><i class="fa-solid fa-info-circle"></i> درباره ما</a>
+    <a href="#"><i class="fa-solid fa-phone"></i> تماس با ما</a>
+  </div>
+
+<div class="blog-page-wrapper" dir="rtl">
+
+    <!-- ستون اصلی: محتوای مطلب -->
+    <div class="blog-main-content">
+
+        <div class="blog-details-image">
+            <img src="./image/AVATAR/13429720.jpg" alt="تصویر مطلب">
+        </div>
+
+        <div class="blog-details-content">
+
+            <p>
+                این محصول با دقت و وسواس فراوان تولید شده تا کیفیت آن در بالاترین سطح ممکن حفظ شود. تمامی
+                مراحل تولید زیر نظر متخصصان تغذیه انجام می‌شود و از مواد اولیه‌ی کاملاً طبیعی استفاده می‌گردد.
+                این رویکرد باعث شده محصولات ما در میان مشتریان از محبوبیت بالایی برخوردار باشند و بازخوردهای
+                مثبت زیادی دریافت کنیم.
+            </p>
+
+            <blockquote class="blog-quote">
+                طعم اصیل و سنتی، حاصل صبر و دقت در هر مرحله از فرآیند تولید است.
+            </blockquote>
+
+            <p>
+                بخش تحقیق و توسعه‌ی ما به‌طور مستمر در حال بررسی روش‌های جدید برای بهبود کیفیت محصولات است.
+                همکاری نزدیک با کشاورزان محلی، استفاده از مواد اولیه‌ی فصلی و رعایت استانداردهای بهداشتی از
+                جمله اصولی هستند که در تمام مراحل تولید رعایت می‌شوند.
+            </p>
+
+          <div class="blog-author-footer">
+
+    <div class="author-info">
+        <div class="author-avatar">
+            <img src="./image/AVATAR/girl2.jpg" alt="نویسنده">
+        </div>
+        <div class="author-text">
+            <span class="author-name">مریم احمدی</span>
+            <span class="author-role">مدیر سایت</span>
+            <div class="published-date">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                <span>نوشته شده در ۱۴۰۵/۰۴/۱۳</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="blog-meta-info">
+        <div class="meta-line">
+            <span class="meta-label">دسته‌بندی:</span>
+            <span class="meta-value">تغذیه</span>
+        </div>
+        <div class="meta-line">
+            <span class="meta-label">برچسب‌ها:</span>
+            <span class="meta-value">همه، پرطرفدار، آشپزی، تغذیه سالم، سبک زندگی</span>
+        </div>
+        <div class="blog-share">
+            <a href="#" title="فیسبوک"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" title="توییتر"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" title="اینستاگرام"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" title="تلگرام"><i class="fa-brands fa-telegram"></i></a>
+            <a href="#" title="ایمیل"><i class="fa-regular fa-envelope"></i></a>
+        </div>
+    </div>
+
+</div>
+
+        </div>
+
+    </div>
+
+    <!-- ستون سایدبار -->
+    <aside class="blog-sidebar">
+
+        <div class="sidebar-widget search-widget">
+            <form class="sidebar-search-form">
+                <input type="text" placeholder="جستجو...">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
+
+        <div class="sidebar-widget recent-posts-widget">
+            <h4 class="widget-title">اخبار اخیر</h4>
+
+            <a href="#" class="recent-post-item">
+                <div class="recent-post-thumb">
+                    <img src="./image/AVATAR/banner-desk.png" alt="خبر">
+                </div>
+                <div class="recent-post-text">
+                    <span class="recent-post-title">۹ نوع سبزیجات مفید برای کبد</span>
+                    <span class="recent-post-date">۱۵ اسفند ۱۴۰۳</span>
+                </div>
+            </a>
+
+            <a href="#" class="recent-post-item">
+                <div class="recent-post-thumb">
+                    <img src="./image/AVATAR/artboard-4-copy.png" alt="خبر">
+                </div>
+                <div class="recent-post-text">
+                    <span class="recent-post-title">نکاتی برای تعادل تغذیه روزانه</span>
+                    <span class="recent-post-date">۱۰ اسفند ۱۴۰۳</span>
+                </div>
+            </a>
+
+            <a href="#" class="recent-post-item">
+                <div class="recent-post-thumb">
+                    <img src="./image/AVATAR/artboard-4.png" alt="خبر">
+                </div>
+                <div class="recent-post-text">
+                    <span class="recent-post-title">۴ اصل کاهش وزن با سبزیجات</span>
+                    <span class="recent-post-date">۰۵ اسفند ۱۴۰۳</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="sidebar-widget categories-widget">
+            <h4 class="widget-title">جستجو بر اساس</h4>
+            <div class="category-tags">
+                <a href="#" class="category-tag">سیب</a>
+                <a href="#" class="category-tag">زیبایی</a>
+                <a href="#" class="category-tag">سبزیجات</a>
+                <a href="#" class="category-tag">میوه</a>
+                <a href="#" class="category-tag">تغذیه سالم</a>
+                <a href="#" class="category-tag">سبک زندگی</a>
+            </div>
+        </div>
+
+    </aside>
+
+</div>
+
+    <section class="blog-section">
+  <div class="blog-container">
+
+    <div class="section-title">
+      <h2>شاید دوست داشته باشید</h2>
+    </div>
+
+    <div class="blog-grid">
+
+      <article class="blog-card">
+        <a href="#" class="blog-img-wrap">
+          <img src="./image/blog/related-1.jpg" alt="مقاله مرتبط" />
+        </a>
+        <div class="blog-content">
+          <div class="blog-meta">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            <span>۱۰ تیر ۱۴۰۵</span>
+          </div>
+          <h3 class="blog-title">
+            <a href="#">راهنمای تهیه ترشی‌های خانگی سالم</a>
+          </h3>
+          <p class="blog-excerpt">
+            آموزش گام‌به‌گام تهیه انواع ترشی و محصولات تخمیری خانگی با رعایت اصول بهداشتی و طعم اصیل سنتی.
+          </p>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <a href="#" class="blog-img-wrap">
+          <img src="./image/blog/related-2.jpg" alt="مقاله مرتبط" />
+        </a>
+        <div class="blog-content">
+          <div class="blog-meta">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            <span>۰۵ تیر ۱۴۰۵</span>
+          </div>
+          <h3 class="blog-title">
+            <a href="#">فواید پروبیوتیک‌های طبیعی برای سلامت روده</a>
+          </h3>
+          <p class="blog-excerpt">
+            بررسی نقش محصولات تخمیری در تقویت سیستم گوارش و افزایش باکتری‌های مفید بدن.
+          </p>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <a href="#" class="blog-img-wrap">
+          <img src="./image/blog/related-3.jpg" alt="مقاله مرتبط" />
+        </a>
+        <div class="blog-content">
+          <div class="blog-meta">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            <span>۲۸ خرداد ۱۴۰۵</span>
+          </div>
+          <h3 class="blog-title">
+            <a href="#">تفاوت تخمیر طبیعی با نگهدارنده‌های شیمیایی</a>
+          </h3>
+          <p class="blog-excerpt">
+            چرا محصولات تخمیر طبیعی نسبت به محصولات صنعتی حاوی نگهدارنده، انتخاب سالم‌تری هستند.
+          </p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+<script src="./weblog.js"></script>
+</body>
+</html>

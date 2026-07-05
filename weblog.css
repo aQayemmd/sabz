@@ -1,0 +1,793 @@
+:root {
+  --primary-green: #477403;  /* سبز پخته‌تر و مات‌تر که چشم را نمی‌زند */
+  --text-dark: #355800;      /* بدون تغییر (سبز بسیار تیره برای متن) */
+  --hover-green: #3b6300;    /* یک درجه تیره‌تر از رنگ اصلی برای هاور */
+  --bg-color: #f8fafc;       /* بدون تغییر (پس‌زمینه) */
+  --surface-white: #FFFFFF;  /* بدون تغییر (رنگ کارت‌ها) */
+  --admin-blue: #2f6690;     /* رنگ اختصاصی لیبل و آواتار پاسخ مدیریت */
+}
+
+
+@font-face {
+  font-family: irt;
+  src: url(./font/Dana/Dana/Webfonts/woff/Dana-Medium.woff);
+}
+@font-face {
+  font-family: irt2;
+  src: url(./font/Dana/Dana/Webfonts/woff/Dana-Black.woff);
+}
+
+input, textarea, select {
+  font-size: 16px !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: irt;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-dark);
+  font-family: irt;
+}
+
+
+/* ============================= */
+/* --- نوبار اصلی --- */
+/* ============================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--surface-white);
+  padding: 15px 5%;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-right-group {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-green);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--primary-green);
+}
+
+.nav-icons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-icons a {
+  color: var(--text-dark);
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.nav-icons a:hover {
+  color: var(--primary-green);
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  color: var(--text-dark);
+  cursor: pointer;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 250px;
+  height: 100vh;
+  background-color: var(--surface-white);
+  box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 60px 20px 20px;
+  transition: right 0.4s ease;
+  z-index: 999;
+}
+
+.mobile-menu.active {
+  right: 0;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-size: 1.1rem;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--bg-color);
+  transition: color 0.3s;
+}
+
+.mobile-menu a:hover {
+  color: var(--primary-green);
+}
+
+.close-menu {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 1.5rem;
+  color: var(--text-dark);
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: none;
+  z-index: 998;
+}
+
+.overlay.active {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
+
+
+/* ============================= */
+/* --- چیدمان کلی صفحه وبلاگ --- */
+/* ============================= */
+
+.blog-page-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    max-width: 1170px;
+    margin: 50px auto;
+    padding: 0 15px;
+}
+
+.blog-main-content {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.blog-sidebar {
+    flex: 0 0 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+/* --- محتوای مطلب (بدون تغییر نسبت به قبل) --- */
+.blog-details-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    margin-bottom: 30px;
+    border-radius: 4px;
+}
+
+.blog-details-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.blog-details-content p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.95;
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+.blog-quote {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--text-dark);
+    line-height: 1.6;
+    margin: 10px 0 30px;
+    font-family: irt2;
+}
+
+.blog-author-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding-top: 30px;
+    margin-top: 20px;
+    border-top: 1px solid #e5e5e5;
+}
+
+.author-info {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.author-avatar {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.author-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.author-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.author-name {
+    font-weight: bold;
+    font-size: 15px;
+    color: var(--text-dark);
+}
+
+.author-role {
+    font-size: 13px;
+    color: #999;
+}
+
+.blog-meta-info {
+    text-align: left;
+}
+.published-date {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #999;
+    font-size: 12.5px;
+    margin-top: 6px;
+}
+
+.published-date svg {
+    flex-shrink: 0;
+}
+
+.meta-line {
+    font-size: 13.5px;
+    margin-bottom: 10px;
+}
+
+.meta-label {
+    font-weight: bold;
+    color: var(--text-dark);
+}
+
+.meta-value {
+    color: #777;
+}
+
+.blog-share {
+    display: flex;
+    flex-direction: row-reverse; /* آیکون‌ها از چپ شروع می‌شوند */
+    gap: 10px;
+    margin-top: 12px;
+    justify-content: flex-start;
+}
+
+.blog-share a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    border-radius: 4px;
+    font-size: 13px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.blog-share a:hover {
+    background-color: var(--primary-green);
+    color: #fff;
+}
+
+
+
+
+/* ============================= */
+/* --- سایدبار --- */
+/* ============================= */
+/* ============================= */
+/* --- سایدبار --- */
+/* ============================= */
+
+.blog-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.sidebar-widget {
+    background-color: var(--surface-white);
+    border: 1px solid #ececec;
+    border-radius: 4px;
+    padding: 26px;
+}
+
+.widget-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--text-dark);
+    margin: 0 0 22px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #eee;
+    font-family: irt2;
+}
+
+/* --- ویجت جستجو --- */
+.search-widget {
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+.sidebar-search-form {
+    display: flex;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.sidebar-search-form input {
+    flex: 1;
+    border: none;
+    padding: 14px 18px;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    background-color: var(--surface-white);
+    color: var(--text-dark);
+}
+
+.sidebar-search-form button {
+    background-color: var(--primary-green);
+    border: none;
+    color: #fff;
+    width: 52px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-search-form button:hover {
+    background-color: var(--hover-green);
+}
+
+/* --- ویجت اخبار اخیر --- */
+.recent-post-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+    margin-bottom: 22px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.recent-post-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.recent-post-thumb {
+    width: 70px;
+    height: 70px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.recent-post-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.recent-post-text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.recent-post-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--text-dark);
+    line-height: 1.5;
+    transition: color 0.3s ease;
+}
+
+.recent-post-item:hover .recent-post-title {
+    color: var(--primary-green);
+}
+
+.recent-post-date {
+    font-size: 12px;
+    color: #aaa;
+}
+
+/* --- ویجت دسته‌بندی‌ها (تگ‌های مربعی) --- */
+.category-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.category-tag {
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    font-size: 13.5px;
+    padding: 11px 18px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.category-tag:hover {
+    background-color: var(--primary-green);
+    color: #fff;
+}
+
+
+/* ========================================= */
+/* --- ریسپانسیو تبلت --- */
+/* ========================================= */
+@media (max-width: 991px) {
+    .blog-page-wrapper {
+        flex-direction: column;
+    }
+
+    .blog-sidebar {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+}
+
+/* ========================================= */
+/* --- ریسپانسیو موبایل --- */
+/* ========================================= */
+@media (max-width: 575px) {
+    .blog-page-wrapper {
+        padding: 0 15px;
+        width: 100%;
+    }
+
+    .blog-sidebar {
+        width: 100%;
+    }
+
+    .sidebar-widget,
+    .search-widget {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .sidebar-search-form {
+        width: 100%;
+    }
+}
+
+/* --- ویجت جستجو --- */
+.sidebar-search-form {
+    display: flex;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.sidebar-search-form input {
+    flex: 1;
+    border: none;
+    padding: 12px 16px;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    background-color: var(--surface-white);
+    color: var(--text-dark);
+}
+
+.sidebar-search-form button {
+    background-color: var(--primary-green);
+    border: none;
+    color: #fff;
+    width: 46px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-search-form button:hover {
+    background-color: var(--hover-green);
+}
+
+/* --- ویجت اخبار اخیر --- */
+.recent-post-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.recent-post-item:last-child {
+    margin-bottom: 0;
+}
+
+.recent-post-thumb {
+    width: 65px;
+    height: 65px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.recent-post-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.recent-post-text {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.recent-post-title {
+    font-size: 13.5px;
+    font-weight: bold;
+    color: var(--text-dark);
+    line-height: 1.5;
+    transition: color 0.3s ease;
+}
+
+.recent-post-item:hover .recent-post-title {
+    color: var(--primary-green);
+}
+
+.recent-post-date {
+    font-size: 11.5px;
+    color: #aaa;
+}
+
+/* --- ویجت دسته‌بندی‌ها (تگ‌های مربعی) --- */
+.category-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.category-tag {
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    font-size: 13.5px;
+    padding: 10px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.category-tag:hover {
+    background-color: var(--primary-green);
+    color: #fff;
+}
+
+
+/* ========================================= */
+/* --- ریسپانسیو تبلت --- */
+/* ========================================= */
+@media (max-width: 991px) {
+    .blog-page-wrapper {
+        flex-direction: column;
+    }
+
+    .blog-sidebar {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+
+    .blog-quote {
+        font-size: 19px;
+    }
+}
+
+/* ========================================= */
+/* --- ریسپانسیو موبایل --- */
+/* ========================================= */
+@media (max-width: 575px) {
+    .blog-page-wrapper {
+        gap: 45px;
+    }
+
+    .blog-details-image {
+        aspect-ratio: 4 / 3;
+        margin-bottom: 22px;
+    }
+
+    .blog-details-content p {
+        font-size: 14px;
+        text-align: right;
+    }
+
+    .blog-quote {
+        font-size: 17px;
+        margin-bottom: 22px;
+    }
+
+    .blog-author-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .blog-meta-info {
+        text-align: right;
+        width: 100%;
+    }
+
+    .blog-share {
+        justify-content: flex-start;
+    }
+}
+
+.blog-container {
+  max-width: 1400px;
+  margin: 80px auto;
+  padding: 0 15px;
+  direction: rtl;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title h2 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #222;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  font-family: irt2;
+}
+
+.section-title h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background-color: var(--primary-green, #508400);
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.blog-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-img-wrap {
+  display: block;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.blog-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.blog-img-wrap:hover img {
+  transform: scale(1.05);
+}
+
+.blog-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #999;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.blog-title {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.blog-title a {
+  color: #222;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.blog-title a:hover {
+  color: var(--primary-green, #508400);
+}
+
+.blog-excerpt {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+@media (max-width: 992px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .blog-img-wrap {
+    height: 220px;
+  }
+}
