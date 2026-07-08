@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>حساب کاربری | آبان بیوتیک</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="profile.css">
+</head>
+<body>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb container">
+    <a href="#">خانه</a> / <span>حساب کاربری</span>
+  </div>
+
+  <main class="container profile-wrapper">
+
+    <!-- Sidebar -->
+    <aside class="profile-sidebar">
+      <div class="user-card">
+        <div class="avatar">ع.ر</div>
+        <div class="user-info">
+          <h3>علی رضایی</h3>
+          <p>0912*******</p>
+        </div>
+      </div>
+
+      <ul class="profile-menu">
+        <li><button class="menu-item active" data-target="panel-dashboard"><i class="fa-solid fa-gauge"></i><span>داشبورد</span></button></li>
+        <li><button class="menu-item" data-target="panel-orders"><i class="fa-solid fa-box"></i><span>سفارش‌های من</span></button></li>
+        <li><button class="menu-item" data-target="panel-wishlist"><i class="fa-solid fa-heart"></i><span>علاقه‌مندی‌ها</span></button></li>
+        <li><button class="menu-item" data-target="panel-addresses"><i class="fa-solid fa-location-dot"></i><span>آدرس‌های من</span></button></li>
+        <li><button class="menu-item" data-target="panel-edit"><i class="fa-solid fa-user-pen"></i><span>ویرایش اطلاعات حساب</span></button></li>
+        <li><button class="menu-item" data-target="panel-password"><i class="fa-solid fa-lock"></i><span>تغییر رمز عبور</span></button></li>
+        <li><button class="menu-item logout-item" id="logoutBtn"><i class="fa-solid fa-arrow-right-from-bracket"></i><span>خروج از حساب</span></button></li>
+      </ul>
+    </aside>
+
+    <!-- Content -->
+    <section class="profile-content">
+
+      <!-- Dashboard -->
+      <div class="panel active" id="panel-dashboard">
+        <h2 class="panel-title">سلام، علی رضایی خوش آمدید</h2>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-number">۱۲</span>
+            <span class="stat-label">تعداد سفارش‌ها</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">۲</span>
+            <span class="stat-label">در حال پردازش</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">۷</span>
+            <span class="stat-label">علاقه‌مندی‌ها</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">۳</span>
+            <span class="stat-label">آدرس‌های ذخیره‌شده</span>
+          </div>
+        </div>
+
+        <h3 class="section-subtitle">آخرین سفارش‌ها</h3>
+        <div class="order-list mini-list">
+
+          <!-- سفارش 1 -->
+          <div class="order-card">
+            <div class="order-card-head">
+              <div class="order-info">
+                <span class="order-number">شماره سفارش: #1023</span>
+                <span>تاریخ: ۱۴۰۵/۰۴/۱۰</span>
+              </div>
+              <span class="status-badge status-shipped">ارسال شده</span>
+            </div>
+            <div class="order-card-body">
+              <div class="order-items-preview">
+                <div class="item-thumb"></div>
+                <div class="item-thumb"></div>
+                <div class="item-thumb"></div>
+              </div>
+              <div class="order-total">مبلغ کل: ۴۸۵,۰۰۰ تومان</div>
+            </div>
+            <button class="btn btn-outline btn-full track-btn" data-id="1023">
+              <i class="fa-solid fa-truck-fast"></i> مشاهده جزئیات و پیگیری
+            </button>
+          </div>
+
+          <!-- سفارش 2 -->
+          <div class="order-card">
+            <div class="order-card-head">
+              <div class="order-info">
+                <span class="order-number">شماره سفارش: #1019</span>
+                <span>تاریخ: ۱۴۰۵/۰۴/۰۲</span>
+              </div>
+              <span class="status-badge status-delivered">تحویل داده شده</span>
+            </div>
+            <div class="order-card-body">
+              <div class="order-items-preview">
+                <div class="item-thumb"></div>
+                <div class="item-thumb"></div>
+              </div>
+              <div class="order-total">مبلغ کل: ۲۱۰,۰۰۰ تومان</div>
+            </div>
+            <button class="btn btn-outline btn-full track-btn" data-id="1019">
+              <i class="fa-solid fa-truck-fast"></i> مشاهده جزئیات و پیگیری
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Orders -->
+      <div class="panel" id="panel-orders">
+        <h2 class="panel-title">سفارش‌های من</h2>
+        <div class="order-list">
+
+          <div class="order-card">
+            <div class="order-card-head">
+              <div class="order-info">
+                <span class="order-number">شماره سفارش: #1023</span>
+                <span>تاریخ: ۱۴۰۵/۰۴/۱۰</span>
+              </div>
+              <span class="status-badge status-shipped">ارسال شده</span>
+            </div>
+            <div class="order-card-body">
+              <div class="order-items-preview">
+                <div class="item-thumb">
+                
+                </div>
+                <div class="item-thumb"></div>
+                <div class="item-thumb"></div>
+              </div>
+              <div class="order-total">مبلغ کل: ۴۸۵,۰۰۰ تومان</div>
+            </div>
+            <button class="btn btn-outline btn-full track-btn" data-id="1023">
+              <i class="fa-solid fa-truck-fast"></i> مشاهده جزئیات و پیگیری
+            </button>
+          </div>
+
+          <div class="order-card">
+            <div class="order-card-head">
+              <div class="order-info">
+                <span class="order-number">شماره سفارش: #1019</span>
+                <span>تاریخ: ۱۴۰۵/۰۴/۰۲</span>
+              </div>
+              <span class="status-badge status-delivered">تحویل داده شده</span>
+            </div>
+            <div class="order-card-body">
+              <div class="order-items-preview">
+                <div class="item-thumb"></div>
+                <div class="item-thumb"></div>
+              </div>
+              <div class="order-total">مبلغ کل: ۲۱۰,۰۰۰ تومان</div>
+            </div>
+            <button class="btn btn-outline btn-full track-btn" data-id="1019">
+              <i class="fa-solid fa-truck-fast"></i> مشاهده جزئیات و پیگیری
+            </button>
+          </div>
+
+          <div class="order-card">
+            <div class="order-card-head">
+              <div class="order-info">
+                <span class="order-number">شماره سفارش: #1005</span>
+                <span>تاریخ: ۱۴۰۵/۰۳/۲۰</span>
+              </div>
+              <span class="status-badge status-processing">در حال پردازش</span>
+            </div>
+            <div class="order-card-body">
+              <div class="order-items-preview">
+                <div class="item-thumb"></div>
+              </div>
+              <div class="order-total">مبلغ کل: ۹۹,۰۰۰ تومان</div>
+            </div>
+            <button class="btn btn-outline btn-full track-btn" data-id="1005">
+              <i class="fa-solid fa-truck-fast"></i> مشاهده جزئیات و پیگیری
+            </button>
+          </div>
+
+          <div class="order-card">
+            <div class="order-card-head">
+              <div class="order-info">
+                <span class="order-number">شماره سفارش: #998</span>
+                <span>تاریخ: ۱۴۰۵/۰۳/۱۰</span>
+              </div>
+              <span class="status-badge status-cancelled">لغو شده</span>
+            </div>
+            <div class="order-card-body">
+              <div class="order-items-preview">
+                <div class="item-thumb"></div>
+              </div>
+              <div class="order-total">مبلغ کل: ۱۵۰,۰۰۰ تومان</div>
+            </div>
+            <button class="btn btn-outline btn-full track-btn" data-id="998">
+              <i class="fa-solid fa-truck-fast"></i> مشاهده جزئیات و پیگیری
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Wishlist -->
+      <div id="panel-wishlist" class="panel">
+        <h2 class="panel-title">علاقه‌مندی‌ها</h2>
+        <div class="wishlist-grid">
+
+          <!-- کارت ۱ -->
+          <div class="wishlist-card">
+            <button class="remove-fav" data-id="1">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="wishlist-img">
+              <img src="./image/prodouct-item/p1.jpg" alt="سبزیجات ارگانیک">
+            </div>
+            <div class="wishlist-body">
+              <div class="wishlist-name">سبزیجات ارگانیک</div>
+              <div class="wishlist-price">۱۲۰,۰۰۰ تومان</div>
+              <button class="btn btn-primary btn-full add-to-cart" data-id="1">
+                <i class="fa-solid fa-cart-plus"></i> افزودن به سبد
+              </button>
+            </div>
+          </div>
+
+          <!-- کارت ۲ -->
+          <div class="wishlist-card">
+            <button class="remove-fav" data-id="2">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="wishlist-img">
+              <img src="./image/prodouct-item/p2.jpg" alt="توت‌های تازه">
+            </div>
+            <div class="wishlist-body">
+              <div class="wishlist-name">توت‌های تازه</div>
+              <div class="wishlist-price">۹۰,۰۰۰ تومان</div>
+              <button class="btn btn-primary btn-full add-to-cart" data-id="2">
+                <i class="fa-solid fa-cart-plus"></i> افزودن به سبد
+              </button>
+            </div>
+          </div>
+
+          <!-- کارت ۳ -->
+          <div class="wishlist-card">
+            <button class="remove-fav" data-id="3">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="wishlist-img">
+              <img src="./image/prodouct-item/p3.jpg" alt="کره و تخم‌مرغ">
+            </div>
+            <div class="wishlist-body">
+              <div class="wishlist-name">کره و تخم‌مرغ</div>
+              <div class="wishlist-price">۱۰۰,۰۰۰ تومان</div>
+              <button class="btn btn-primary btn-full add-to-cart" data-id="3">
+                <i class="fa-solid fa-cart-plus"></i> افزودن به سبد
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Addresses -->
+      <div class="panel" id="panel-addresses">
+        <div class="panel-header-row">
+          <h2 class="panel-title">آدرس‌های من</h2>
+          <button class="btn btn-primary" id="addAddressBtn"><i class="fa-solid fa-plus"></i> افزودن آدرس جدید</button>
+        </div>
+
+        <div class="address-form-box" id="addressFormBox" style="display:none;">
+          <div class="form-grid">
+            <div class="form-group">
+              <label>عنوان آدرس</label>
+              <input type="text" placeholder="مثلاً: خانه، محل کار" id="addressTitle">
+            </div>
+            <div class="form-group">
+              <label>نام گیرنده</label>
+              <input type="text" placeholder="نام و نام خانوادگی" id="addressName">
+            </div>
+            <div class="form-group">
+              <label>شماره تماس</label>
+              <input type="text" placeholder="09xxxxxxxxx" id="addressPhone">
+            </div>
+            <div class="form-group full-width">
+              <label>آدرس کامل</label>
+              <textarea rows="3" placeholder="استان، شهر، خیابان، پلاک..." id="addressText"></textarea>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-primary" id="saveAddressBtn">ذخیره آدرس</button>
+            <button class="btn btn-outline" id="cancelAddressBtn">انصراف</button>
+          </div>
+        </div>
+
+        <div class="address-grid" id="addressGrid">
+
+          <!-- آدرس 1 -->
+          <div class="address-card">
+            <div class="address-title"><i class="fa-solid fa-location-dot"></i> خانه</div>
+            <div class="address-text">علی رضایی - 0912*******<br>تهران، خیابان ولیعصر، پلاک ۱۲، واحد ۳</div>
+            <div class="address-actions">
+              <button class="btn btn-outline btn-sm edit-address" data-id="1"><i class="fa-solid fa-pen"></i> ویرایش</button>
+              <button class="btn btn-sm delete-address" style="color:var(--danger)" data-id="1">
+                <i class="fa-solid fa-trash"></i> حذف
+              </button>
+            </div>
+          </div>
+
+          <!-- آدرس 2 -->
+          <div class="address-card">
+            <div class="address-title"><i class="fa-solid fa-location-dot"></i> محل کار</div>
+            <div class="address-text">علی رضایی - 0912*******<br>تهران، خیابان انقلاب، پلاک ۴۵</div>
+            <div class="address-actions">
+              <button class="btn btn-outline btn-sm edit-address" data-id="2"><i class="fa-solid fa-pen"></i> ویرایش</button>
+              <button class="btn btn-sm delete-address" style="color:var(--danger)" data-id="2">
+                <i class="fa-solid fa-trash"></i> حذف
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Edit Info -->
+      <div class="panel" id="panel-edit">
+        <h2 class="panel-title">ویرایش اطلاعات حساب</h2>
+        <form class="account-form" id="editForm">
+          <div class="form-grid">
+            <div class="form-group">
+              <label>نام و نام خانوادگی</label>
+              <input type="text" value="علی رضایی" name="fullname">
+            </div>
+            <div class="form-group">
+              <label>شماره موبایل</label>
+              <input type="text" value="0912*******" disabled>
+            </div>
+            <div class="form-group">
+              <label>ایمیل</label>
+              <input type="email" placeholder="example@mail.com" name="email">
+            </div>
+            <div class="form-group">
+              <label>کد ملی</label>
+              <input type="text" placeholder="کد ملی خود را وارد کنید" name="nationalid">
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">ذخیره تغییرات</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Change Password -->
+      <div class="panel" id="panel-password">
+        <h2 class="panel-title">تغییر رمز عبور</h2>
+        <form class="account-form" id="passwordForm">
+          <div class="form-grid">
+            <div class="form-group full-width">
+              <label>رمز عبور فعلی</label>
+              <input type="password" id="currentPass" name="currentPass">
+            </div>
+            <div class="form-group">
+              <label>رمز عبور جدید</label>
+              <input type="password" id="newPass" name="newPass">
+            </div>
+            <div class="form-group">
+              <label>تکرار رمز عبور جدید</label>
+              <input type="password" id="confirmPass" name="confirmPass">
+            </div>
+          </div>
+          <p class="form-msg" id="passMsg"></p>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">تغییر رمز عبور</button>
+          </div>
+        </form>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Order Tracking Modal -->
+  <div class="modal-overlay" id="orderModal">
+    <div class="modal-box">
+      <button class="modal-close" id="modalCloseBtn"><i class="fa-solid fa-xmark"></i></button>
+      <h3 class="modal-title">پیگیری سفارش <span id="modalOrderNumber"></span></h3>
+
+      <div class="tracking-stepper" id="trackingStepper">
+        <!-- این بخش با JS پر می‌شه یا از سمت سرور -->
+      </div>
+
+      <h4 class="section-subtitle">اقلام سفارش</h4>
+      <div class="modal-items-list" id="modalItemsList">
+        <!-- اقلام با JS یا Razor پر می‌شن -->
+      </div>
+
+      <div class="modal-total" id="modalOrderTotal"></div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <!-- Data for modal (این دیتا رو بک‌اند باید JSON بده یا Razor render کنه) -->
+  <script id="ordersData" type="application/json">
+  [
+    {
+      "id": 1023,
+      "date": "۱۴۰۵/۰۴/۱۰",
+      "total": "۴۸۵,۰۰۰",
+      "status": "shipped",
+      "statusLabel": "ارسال شده",
+      "items": [
+        { "name": "سبزیجات ارگانیک", "price": "۱۲۰,۰۰۰" },
+        { "name": "گوشت تازه", "price": "۲۶۵,۰۰۰" },
+        { "name": "کره و تخم‌مرغ", "price": "۱۰۰,۰۰۰" }
+      ]
+    },
+    {
+      "id": 1019,
+      "date": "۱۴۰۵/۰۴/۰۲",
+      "total": "۲۱۰,۰۰۰",
+      "status": "delivered",
+      "statusLabel": "تحویل داده شده",
+      "items": [
+        { "name": "توت‌های تازه", "price": "۹۰,۰۰۰" },
+        { "name": "هدایای میوه و آجیل", "price": "۱۲۰,۰۰۰" }
+      ]
+    },
+    {
+      "id": 1005,
+      "date": "۱۴۰۵/۰۳/۲۰",
+      "total": "۹۹,۰۰۰",
+      "status": "processing",
+      "statusLabel": "در حال پردازش",
+      "items": [
+        { "name": "فست فود", "price": "۹۹,۰۰۰" }
+      ]
+    },
+    {
+      "id": 998,
+      "date": "۱۴۰۵/۰۳/۱۰",
+      "total": "۱۵۰,۰۰۰",
+      "status": "cancelled",
+      "statusLabel": "لغو شده",
+      "items": [
+        { "name": "غذاهای دریایی", "price": "۱۵۰,۰۰۰" }
+      ]
+    }
+  ]
+  </script>
+
+  <script src="profile.js"></script>
+</body>
+</html>
