@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>قوانین و مقررات | آبان بیوتیک</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+  :root {
+    --primary-green: #477403;
+    --text-dark: #1c1c1c;
+    --hover-green: #3b6300;
+    --bg-color: #f8fafc;
+    --surface-white: #FFFFFF;
+
+    --radius: 5px;
+    --border-color: #e2e6ea;
+    --gray-text: #6b7280;
+    --gray-bg: #f1f4f6;
+
+    --success: #2f8a3e;
+    --success-bg: #e7f5ea;
+    --warning: #b8860b;
+    --warning-bg: #fdf3d9;
+    --info: #2563a8;
+    --info-bg: #e7f0fb;
+    --danger: #c0392b;
+    --danger-bg: #fbe9e7;
+
+    --shadow: 0 2px 10px rgba(0,0,0,0.05);
+
+    /* derived tints of the primary green, used only for soft backgrounds */
+    --green-tint-050: rgba(71,116,3,0.05);
+    --green-tint-100: rgba(71,116,3,0.11);
+  }
+
+  *{ box-sizing:border-box; }
+
+  body{
+    margin:0;
+    background:var(--bg-color);
+    font-family:'Vazirmatn', Tahoma, sans-serif;
+    color:var(--text-dark);
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .page{
+    max-width:1200px;
+    margin:0 auto;
+    padding: clamp(28px, 5vw, 64px) clamp(18px, 5vw, 40px) 80px;
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    display:grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 40px;
+    align-items:center;
+    padding-bottom: 56px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 56px;
+  }
+
+  .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:var(--green-tint-100);
+    color:var(--primary-green);
+    font-size:13px;
+    font-weight:600;
+    padding:8px 18px;
+    border-radius:var(--radius);
+    margin-bottom:22px;
+  }
+
+  .hero h1{
+    font-size: clamp(28px, 4vw, 44px);
+    font-weight:800;
+    line-height:1.35;
+    margin:0 0 18px;
+    color:var(--text-dark);
+  }
+
+  .hero p{
+    font-size: clamp(14.5px, 1.6vw, 16.5px);
+    line-height:2;
+    color:var(--gray-text);
+    margin:0;
+    max-width: 46ch;
+  }
+
+  .hero-visual{
+    position:relative;
+    height: clamp(220px, 30vw, 340px);
+    border-radius: var(--radius);
+    background:
+      radial-gradient(circle, var(--primary-green) 1.6px, transparent 1.6px) 0 0/18px 18px,
+      var(--green-tint-050);
+    overflow:hidden;
+  }
+  .hero-visual::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background: radial-gradient(circle at 50% 50%, transparent 55%, var(--green-tint-050) 100%);
+  }
+  .hero-visual .blob{
+    position:absolute;
+    border-radius:50%;
+    background: var(--green-tint-100);
+    opacity:.9;
+  }
+  .hero-visual .blob.b1{ width:150px; height:150px; top:-40px; left:-30px; }
+  .hero-visual .blob.b2{ width:200px; height:200px; bottom:-70px; right:-60px; }
+  .hero-visual .badge{
+    position:absolute;
+    top:50%; left:50%;
+    transform:translate(-50%,-50%);
+    width: clamp(84px, 12vw, 118px);
+    height: clamp(84px, 12vw, 118px);
+    border-radius:50%;
+    background: var(--primary-green);
+    box-shadow: 0 20px 40px -14px rgba(71,116,3,0.45);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:2;
+  }
+  .hero-visual .badge i{
+    color:#fff;
+    font-size: clamp(28px, 4vw, 40px);
+  }
+
+  /* ---------- Intro strip ---------- */
+  .intro-strip{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    background: var(--text-dark);
+    color:#fff;
+    border-radius: var(--radius);
+    padding: 20px 26px;
+    margin-bottom: 44px;
+  }
+  .intro-strip i{
+    flex:none;
+    font-size:20px;
+    color: #b9d97a;
+  }
+  .intro-strip p{
+    margin:0;
+    font-size:14.5px;
+    line-height:1.9;
+    color: #e7e9e5;
+  }
+  .intro-strip strong{ color:#fff; }
+
+  /* ---------- Terms grid ---------- */
+  .terms-heading{
+    text-align:center;
+    margin: 0 auto 40px;
+    max-width: 640px;
+  }
+  .terms-heading span{
+    display:inline-block;
+    background:var(--green-tint-100);
+    color:var(--primary-green);
+    font-size:13px;
+    font-weight:600;
+    padding:7px 16px;
+    border-radius:var(--radius);
+    margin-bottom:16px;
+  }
+  .terms-heading h2{
+    font-size: clamp(22px, 3vw, 30px);
+    font-weight:800;
+    margin:0 0 12px;
+    color:var(--text-dark);
+  }
+  .terms-heading p{
+    color:var(--gray-text);
+    font-size:14.5px;
+    line-height:1.9;
+    margin:0;
+  }
+
+  .terms-grid{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .term-card{
+    background: var(--surface-white);
+    border:1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 28px 26px;
+    display:flex;
+    gap:18px;
+    transition: box-shadow .25s ease, transform .25s ease, border-color .25s ease;
+  }
+  .term-card:hover{
+    box-shadow: var(--shadow);
+    border-color: var(--green-tint-100);
+    transform: translateY(-3px);
+  }
+
+  .term-num{
+    flex:none;
+    width:46px; height:46px;
+    border-radius:var(--radius);
+    background: var(--gray-bg);
+    color: var(--primary-green);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:800;
+    font-size:15px;
+  }
+
+  .term-icon{
+    flex:none;
+    width:46px; height:46px;
+    border-radius:var(--radius);
+    background: var(--green-tint-100);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .term-icon i{ font-size:19px; color:var(--primary-green); }
+
+  .term-body h3{
+    margin:2px 0 8px;
+    font-size:16.5px;
+    font-weight:700;
+    color: var(--text-dark);
+  }
+  .term-body p{
+    margin:0;
+    font-size:13.8px;
+    line-height:2;
+    color: var(--gray-text);
+  }
+
+  .term-card.highlight{
+    background: linear-gradient(180deg, var(--green-tint-050), #fff);
+    border-color: var(--green-tint-100);
+  }
+  .term-card.highlight .term-icon{
+    background: var(--primary-green);
+  }
+  .term-card.highlight .term-icon i{ color:#fff; }
+
+  /* ---------- Note strip ---------- */
+  .note-strip{
+    margin-top: 48px;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:space-between;
+    gap:18px;
+    background: var(--green-tint-050);
+    border-radius: var(--radius);
+    padding: 24px 28px;
+  }
+  .note-strip p{
+    margin:0;
+    font-size:13.8px;
+    line-height:1.9;
+    color: var(--gray-text);
+    max-width: 60ch;
+  }
+  .note-strip .cta{
+    flex:none;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background: var(--primary-green);
+    color:#fff;
+    font-size:14px;
+    font-weight:600;
+    padding:12px 22px;
+    border-radius: var(--radius);
+    white-space:nowrap;
+    transition: background .2s ease;
+  }
+  .note-strip .cta:hover{ background: var(--hover-green); }
+  .note-strip .cta i{ font-size:14px; }
+
+  /* ---------- Tablet ---------- */
+  @media (max-width: 900px){
+    .hero{
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+    .hero-visual{ order:-1; height:200px; }
+    .terms-grid{ grid-template-columns: 1fr; }
+    .intro-strip{ align-items:flex-start; }
+  }
+
+  /* ---------- Mobile ---------- */
+  @media (max-width: 560px){
+    .page{ padding: 22px 14px 56px; }
+    .hero{ padding-bottom:36px; margin-bottom:36px; }
+    .term-card{
+      flex-direction:column;
+      padding: 22px 20px;
+      gap:14px;
+    }
+    .note-strip{
+      flex-direction:column;
+      align-items:flex-start;
+    }
+    .note-strip .cta{ width:100%; justify-content:center; }
+    .intro-strip{ flex-direction:column; align-items:flex-start; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .term-card{ transition:none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div>
+      <span class="eyebrow">قوانین و مقررات</span>
+      <h1>چارچوب خرید و مصرف مطمئن از آبان بیوتیک</h1>
+      <p>پیش از ثبت سفارش، این صفحه رو مطالعه کنید. اینجا نحوه ثبت سفارش، پرداخت، ارسال و نگهداری محصولات تخمیری آبان بیوتیک رو به‌صورت شفاف توضیح دادیم تا خریدی آسوده و بدون ابهام داشته باشید.</p>
+    </div>
+    <div class="hero-visual">
+      <div class="blob b1"></div>
+      <div class="blob b2"></div>
+      <div class="badge">
+        <i class="fa-solid fa-leaf"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro strip -->
+  <div class="intro-strip">
+    <i class="fa-solid fa-shield-halved"></i>
+    <p>استفاده از فروشگاه آبان بیوتیک به منزله‌ی <strong>پذیرش کامل</strong> بندهای زیر است. در صورت هرگونه ابهام، پیش از ثبت سفارش با پشتیبانی ما در ارتباط باشید.</p>
+  </div>
+
+  <!-- Terms heading -->
+  <div class="terms-heading">
+    <span>مواد و بندها</span>
+    <h2>آنچه لازم است پیش از خرید بدانید</h2>
+    <p>ده بند زیر تمام مراحل خرید، از ثبت سفارش تا نگهداری محصول در خانه‌ی شما، را پوشش می‌دهد.</p>
+  </div>
+
+  <!-- Terms grid -->
+  <div class="terms-grid">
+
+    <div class="term-card">
+      <div class="term-num">۰۱</div>
+      <div class="term-body">
+        <h3>درستی اطلاعات سفارش</h3>
+        <p>آدرس، شماره تماس و مشخصات گیرنده باید توسط خودتان به‌درستی وارد بشه. آبان بیوتیک سفارش رو دقیقاً بر پایه‌ی همون اطلاعاتی که در فرم خرید ثبت شده، بسته‌بندی و ارسال می‌کنه؛ پس لطفاً قبل از تأیید نهایی، یک بار دیگه اطلاعات رو چک کنید.</p>
+      </div>
+    </div>
+
+    <div class="term-card">
+      <div class="term-num">۰۲</div>
+      <div class="term-body">
+        <h3>قیمت‌گذاری و پرداخت</h3>
+        <p>مبلغ درج‌شده برای هر محصول به تومان و با احتساب عوارض قانونیه. تراکنش‌ها فقط از مسیر درگاه‌های بانکی معتبر انجام می‌شه و سفارش شما تا زمانی که پرداخت با موفقیت تکمیل نشه، در سیستم نهایی ثبت نخواهد شد.</p>
+      </div>
+    </div>
+
+    <div class="term-card">
+      <div class="term-num">۰۳</div>
+      <div class="term-body">
+        <h3>زمان‌بندی ارسال</h3>
+        <p>تحویل کالا مطابق با بازه‌های زمانی اعلام‌شده در صفحه‌ی ارسال انجام می‌شه، اما این بازه می‌تونه بسته به فاصله‌ی شهر شما تا مبدأ یا شرایط شرکت پستی کمی جابه‌جا بشه؛ در چنین مواردی از طریق پیامک یا تماس در جریان قرار می‌گیرید.</p>
+      </div>
+    </div>
+
+    <div class="term-card highlight">
+      <div class="term-icon">
+        <i class="fa-solid fa-snowflake"></i>
+      </div>
+      <div class="term-body">
+        <h3>نگهداری زنجیره‌ی سرد</h3>
+        <p>تمام محصولات تخمیری ما زنده و فعال هستن؛ برای حفظ کیفیت و باکتری‌های مفید (پروبیوتیک) باید بلافاصله در یخچال و در دمای ۲ تا ۸ درجه‌ی سانتی‌گراد نگهداری بشن. مسئولیت مصرف محصول خارج از این بازه‌ی دمایی با خریدار خواهد بود.</p>
+      </div>
+    </div>
+
+    <div class="term-card">
+      <div class="term-num">۰۴</div>
+      <div class="term-body">
+        <h3>مرجوعی و تعویض</h3>
+        <p>چون محصولات تخمیری ماهیتی زنده و طبیعی دارن، مرجوع کردن کالا تنها زمانی پذیرفته می‌شه که بسته‌بندی آسیب دیده یا نقص واقعی در محصول وجود داشته باشه. تغییر جزئی طعم یا نشتی اندک ناشی از فرآیند طبیعی تخمیر، مشمول مرجوعی نیست.</p>
+      </div>
+    </div>
+
+    <div class="term-card">
+      <div class="term-num">۰۵</div>
+      <div class="term-body">
+        <h3>ملاحظات سلامتی</h3>
+        <p>پیشنهاد می‌کنیم پیش از مصرف، وضعیت سلامت خودتون رو در نظر بگیرید. افرادی که حساسیت به هیستامین دارن، مشکل گوارشی حاد، زخم معده یا مصرف داروهای رقیق‌کننده‌ی خون دارن، بهتره پیش از خرید با پزشک مشورت کنن.</p>
+      </div>
+    </div>
+
+    <div class="term-card">
+      <div class="term-num">۰۶</div>
+      <div class="term-body">
+        <h3>تازگی و تاریخ تولید</h3>
+        <p>هر بطری در آبان بیوتیک با تاریخ تولید مشخص، درست پیش از ارسال بسته‌بندی می‌شه تا محصول با بیشترین میزان فعالیت پروبیوتیکی به دست شما برسه. تاریخ تولید و مصرف روی برچسب هر محصول قابل مشاهده‌ست.</p>
+      </div>
+    </div>
+
+    <div class="term-card">
+      <div class="term-num">۰۷</div>
+      <div class="term-body">
+        <h3>مالکیت محتوا</h3>
+        <p>متن، تصاویر، لوگو و طراحی این وب‌سایت متعلق به آبان بیوتیک است و کپی‌برداری یا استفاده‌ی تجاری از اون‌ها بدون مجوز کتبی از ما مجاز نیست.</p>
+      </div>
+    </div>
+
+    <div class="term-card">
+      <div class="term-num">۰۸</div>
+      <div class="term-body">
+        <h3>حدود مسئولیت</h3>
+        <p>ما همیشه تلاش می‌کنیم توضیحات هر محصول دقیق و به‌روز باشه، اما نحوه‌ی مصرف و رعایت موارد منع‌شده در نهایت بر عهده‌ی خود مصرف‌کننده است.</p>
+      </div>
+    </div>
+
+    <div class="term-card">
+      <div class="term-num">۰۹</div>
+      <div class="term-body">
+        <h3>ارتباط با پشتیبانی</h3>
+        <p>برای هر سوال، ابهام یا مشکلی درباره‌ی سفارش‌تون، تیم پشتیبانی آبان بیوتیک از طریق شماره تماس و ایمیل درج‌شده در صفحه‌ی «ارتباط با ما» پاسخگوی شماست.</p>
+      </div>
+    </div>
+
+    <div class="term-card">
+      <div class="term-num">۱۰</div>
+      <div class="term-body">
+        <h3>به‌روزرسانی قوانین</h3>
+        <p>آبان بیوتیک این حق رو داره که در صورت نیاز، بندهای این صفحه رو به‌روزرسانی کنه؛ نسخه‌ی فعال همیشه همینجا و روی همین صفحه در دسترس شماست.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Note strip -->
+  <div class="note-strip">
+    <p>هنوز سوالی درباره‌ی نحوه‌ی خرید یا نگهداری محصولات دارید؟ همکاران ما در آبان بیوتیک ۲۴ ساعته آماده‌ی پاسخگویی هستن.</p>
+    <span class="cta">
+      تماس با پشتیبانی
+      <i class="fa-solid fa-headset"></i>
+    </span>
+  </div>
+
+</div>
+
+</body>
+</html>
