@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>سبد خرید | آبان بیوتیک</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="cart.css">
+</head>
+<body>
+
+<!--
+  توضیح برای توسعه‌دهنده بک‌اند (ASP.NET):
+  - هر ردیف محصول در یک بلاک <article class="cart-item" data-price="عدد به تومان" data-qty="عدد"> قرار دارد.
+  - بلاک بین کامنت‌های "START: آیتم سبد خرید" و "END: آیتم سبد خرید" قابل تبدیل به یک @foreach روی لیست سبد خرید است.
+  - مقادیر قیمت به‌صورت عدد خام (بدون جداکننده و بدون واحد) در data-price قرار گرفته تا محاسبه سمت سرور هم ساده باشد.
+  - عکس هر محصول به‌صورت تگ <img> داخل item-thumb قرار دارد؛ فعلاً به فایل placeholder-product.svg اشاره می‌کند.
+    وقتی بک‌اند وصل شود، کافی است مقدار src هر <img> با آدرس واقعی عکس محصول جایگزین شود (مثلاً src="@item.ImageUrl")، هیچ تغییر دیگری در HTML/CSS لازم نیست.
+  - دکمه «ثبت سفارش» هیچ درخواستی به سرور ارسال نمی‌کند؛ فقط یک پیام راهنما برای هدایت به دایرکت اینستاگرام نمایش می‌دهد.
+    در صورت نیاز به ثبت سفارش در دیتابیس، می‌توان قبل از نمایش این پیام یک درخواست POST ساده اضافه کرد.
+-->
+
+<main class="cart-page">
+
+  <!-- بردکرامب -->
+  <nav class="breadcrumb" aria-label="مسیر صفحه">
+    <a href="#">خانه</a>
+    <i class="fa-solid fa-angle-left"></i>
+    <span>سبد خرید</span>
+  </nav>
+
+  <div class="page-heading">
+    <h1><i class="fa-solid fa-cart-shopping"></i> سبد خرید شما</h1>
+    <p>محصولات انتخابی خود را بررسی کنید و در صورت نیاز تعداد آن‌ها را ویرایش کنید.</p>
+  </div>
+
+  <div class="cart-layout">
+
+    <!-- ===================== لیست محصولات سبد خرید ===================== -->
+    <section class="cart-items-card" aria-label="لیست محصولات سبد خرید">
+
+      <div class="cart-items-head">
+        <span>محصول</span>
+        <span>قیمت واحد</span>
+        <span>تعداد</span>
+        <span>جمع</span>
+        <span></span>
+      </div>
+
+      <div class="cart-items-list" id="cartItemsList">
+
+        <!-- START: آیتم سبد خرید -->
+        <article class="cart-item" data-price="250000" data-qty="1">
+          <div class="item-info">
+            <div class="item-thumb">
+              <!-- بک‌اند: مقدار src را با آدرس واقعی عکس محصول جایگزین کنید (مثلاً src="@item.ImageUrl") -->
+              <img src="placeholder-product.svg" alt="کیمچی سنتی" loading="lazy" onerror="this.src='placeholder-product.svg'">
+            </div>
+            <div class="item-text">
+              <h3>کیمچی سنتی</h3>
+              <span class="item-meta">وزن: ۵۰۰ گرم</span>
+            </div>
+          </div>
+
+          <div class="item-price" data-role="unit-price">250,000 تومان</div>
+
+          <div class="qty-control">
+            <button type="button" class="qty-btn" data-action="decrease" aria-label="کاهش تعداد">
+              <i class="fa-solid fa-minus"></i>
+            </button>
+            <input type="number" class="qty-input" name="quantity" value="1" min="1" inputmode="numeric" aria-label="تعداد کیمچی سنتی">
+            <button type="button" class="qty-btn" data-action="increase" aria-label="افزایش تعداد">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+          </div>
+
+          <div class="item-total" data-role="line-total">250,000 تومان</div>
+
+          <button type="button" class="remove-btn" data-action="remove" aria-label="حذف کیمچی سنتی از سبد خرید">
+            <i class="fa-solid fa-trash-can"></i>
+          </button>
+        </article>
+        <!-- END: آیتم سبد خرید -->
+
+        <!-- START: آیتم سبد خرید -->
+        <article class="cart-item" data-price="180000" data-qty="2">
+          <div class="item-info">
+            <div class="item-thumb">
+              <!-- بک‌اند: مقدار src را با آدرس واقعی عکس محصول جایگزین کنید (مثلاً src="@item.ImageUrl") -->
+              <img src="placeholder-product.svg" alt="سرکه سیب تخمیری" loading="lazy" onerror="this.src='placeholder-product.svg'">
+            </div>
+            <div class="item-text">
+              <h3>سرکه سیب تخمیری</h3>
+              <span class="item-meta">حجم: ۵۰۰ میلی‌لیتر</span>
+            </div>
+          </div>
+
+          <div class="item-price" data-role="unit-price">180,000 تومان</div>
+
+          <div class="qty-control">
+            <button type="button" class="qty-btn" data-action="decrease" aria-label="کاهش تعداد">
+              <i class="fa-solid fa-minus"></i>
+            </button>
+            <input type="number" class="qty-input" name="quantity" value="2" min="1" inputmode="numeric" aria-label="تعداد سرکه سیب تخمیری">
+            <button type="button" class="qty-btn" data-action="increase" aria-label="افزایش تعداد">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+          </div>
+
+          <div class="item-total" data-role="line-total">360,000 تومان</div>
+
+          <button type="button" class="remove-btn" data-action="remove" aria-label="حذف سرکه سیب تخمیری از سبد خرید">
+            <i class="fa-solid fa-trash-can"></i>
+          </button>
+        </article>
+        <!-- END: آیتم سبد خرید -->
+
+        <!-- START: آیتم سبد خرید -->
+        <article class="cart-item" data-price="210000" data-qty="1">
+          <div class="item-info">
+            <div class="item-thumb">
+              <!-- بک‌اند: مقدار src را با آدرس واقعی عکس محصول جایگزین کنید (مثلاً src="@item.ImageUrl") -->
+              <img src="placeholder-product.svg" alt="ساورکرات ارگانیک" loading="lazy" onerror="this.src='placeholder-product.svg'">
+            </div>
+            <div class="item-text">
+              <h3>ساورکرات ارگانیک</h3>
+              <span class="item-meta">وزن: ۴۰۰ گرم</span>
+            </div>
+          </div>
+
+          <div class="item-price" data-role="unit-price">210,000 تومان</div>
+
+          <div class="qty-control">
+            <button type="button" class="qty-btn" data-action="decrease" aria-label="کاهش تعداد">
+              <i class="fa-solid fa-minus"></i>
+            </button>
+            <input type="number" class="qty-input" name="quantity" value="1" min="1" inputmode="numeric" aria-label="تعداد ساورکرات ارگانیک">
+            <button type="button" class="qty-btn" data-action="increase" aria-label="افزایش تعداد">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+          </div>
+
+          <div class="item-total" data-role="line-total">210,000 تومان</div>
+
+          <button type="button" class="remove-btn" data-action="remove" aria-label="حذف ساورکرات ارگانیک از سبد خرید">
+            <i class="fa-solid fa-trash-can"></i>
+          </button>
+        </article>
+        <!-- END: آیتم سبد خرید -->
+
+        <!-- START: آیتم سبد خرید -->
+        <article class="cart-item" data-price="150000" data-qty="1">
+          <div class="item-info">
+            <div class="item-thumb">
+              <!-- بک‌اند: مقدار src را با آدرس واقعی عکس محصول جایگزین کنید (مثلاً src="@item.ImageUrl") -->
+              <img src="placeholder-product.svg" alt="خیارشور تخمیری" loading="lazy" onerror="this.src='placeholder-product.svg'">
+            </div>
+            <div class="item-text">
+              <h3>خیارشور تخمیری</h3>
+              <span class="item-meta">وزن: ۵۰۰ گرم</span>
+            </div>
+          </div>
+
+          <div class="item-price" data-role="unit-price">150,000 تومان</div>
+
+          <div class="qty-control">
+            <button type="button" class="qty-btn" data-action="decrease" aria-label="کاهش تعداد">
+              <i class="fa-solid fa-minus"></i>
+            </button>
+            <input type="number" class="qty-input" name="quantity" value="1" min="1" inputmode="numeric" aria-label="تعداد خیارشور تخمیری">
+            <button type="button" class="qty-btn" data-action="increase" aria-label="افزایش تعداد">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+          </div>
+
+          <div class="item-total" data-role="line-total">150,000 تومان</div>
+
+          <button type="button" class="remove-btn" data-action="remove" aria-label="حذف خیارشور تخمیری از سبد خرید">
+            <i class="fa-solid fa-trash-can"></i>
+          </button>
+        </article>
+        <!-- END: آیتم سبد خرید -->
+
+      </div>
+
+      <!-- حالت خالی بودن سبد خرید -->
+      <div class="empty-cart hidden" id="emptyCartMessage">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <h3>سبد خرید شما خالی است</h3>
+        <p>محصولی برای نمایش وجود ندارد. برای مشاهده و افزودن محصول به فروشگاه بازگردید.</p>
+      </div>
+
+    </section>
+
+    <!-- ===================== خلاصه سفارش ===================== -->
+    <aside class="summary-card" aria-label="خلاصه سفارش">
+      <h2>خلاصه سفارش</h2>
+
+      <div class="summary-row">
+        <span>تعداد کالاها</span>
+        <span id="summaryCount">۵ عدد</span>
+      </div>
+
+      <div class="summary-row">
+        <span>جمع جزء</span>
+        <span id="summarySubtotal">890,000 تومان</span>
+      </div>
+
+      <div class="summary-note">
+        <i class="fa-solid fa-circle-info"></i>
+        هزینه ارسال، پس از هماهنگی نهایی در دایرکت اینستاگرام مشخص می‌شود.
+      </div>
+
+      <div class="summary-total">
+        <span>جمع کل</span>
+        <span id="summaryTotal">890,000 تومان</span>
+      </div>
+
+      <button type="button" class="checkout-btn" id="checkoutBtn">
+        <span>ثبت سفارش</span>
+        <i class="fa-solid fa-arrow-left"></i>
+      </button>
+
+      <p class="summary-hint">
+        فعلاً فروش محصولات فقط از طریق دایرکت اینستاگرام انجام می‌شود.
+      </p>
+    </aside>
+
+  </div>
+
+</main>
+
+<!-- ===================== پنجره راهنمای سفارش از طریق دایرکت ===================== -->
+<div class="modal-overlay" id="checkoutModal">
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+
+    <button type="button" class="modal-close" id="modalCloseBtn" aria-label="بستن پنجره">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <div class="modal-icon">
+      <i class="fa-brands fa-instagram"></i>
+    </div>
+
+    <h2 id="modalTitle">یک قدم تا ثبت سفارش!</h2>
+
+    <p class="modal-text">
+      فعلاً فروش محصولات آبان بیوتیک فقط از طریق دایرکت اینستاگرام انجام می‌شود.
+      کافی است از همین صفحه سبد خرید یک اسکرین‌شات بگیرید و برای ما در دایرکت ارسال کنید؛
+      سفارش شما در سریع‌ترین زمان ممکن توسط تیم ما بررسی و نهایی خواهد شد.
+    </p>
+
+    <div class="modal-tip">
+      <i class="fa-solid fa-camera-retro"></i>
+      از همین صفحه یک اسکرین‌شات بگیرید و در پیام دایرکت برای ما ارسال کنید.
+    </div>
+
+    <div class="modal-actions">
+      <a href="https://ig.me/m/abanbioticc" target="_blank" rel="noopener noreferrer" class="modal-btn-primary">
+        <i class="fa-brands fa-instagram"></i>
+        <span>رفتن به دایرکت اینستاگرام</span>
+      </a>
+      <button type="button" class="modal-btn-secondary" id="modalCancelBtn">متوجه شدم</button>
+    </div>
+
+  </div>
+</div>
+
+<script src="cart.js"></script>
+</body>
+</html>
