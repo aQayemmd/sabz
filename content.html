@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ارتباط با ما | آبان بیوتیک</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="./content.css">
+</head>
+<body>
+
+<main class="contact-page">
+
+  <!-- بردکرامب -->
+  <nav class="breadcrumb" aria-label="مسیر صفحه">
+    <a href="#">خانه</a>
+    <i class="fa-solid fa-angle-left"></i>
+    <span>ارتباط با ما</span>
+  </nav>
+
+  <!-- بخش معرفی و اطلاعات تماس -->
+  <section class="hero-contact">
+
+    <div class="hero-visual" aria-hidden="true">
+      <div class="visual-badge">
+        <i class="fa-solid fa-leaf"></i>
+      </div>
+      <div class="visual-dots"></div>
+    </div>
+
+    <div class="hero-content">
+      <span class="eyebrow">همیشه در دسترس شما</span>
+      <h1>با تیم آبان بیوتیک<br>در ارتباط باشید</h1>
+      <p class="lead">
+        سوالی درباره محصولات ارگانیک، سفارش‌ها یا همکاری دارید؟
+        همکاران ما در آبان بیوتیک آماده پاسخ‌گویی به شما هستند.
+        از راه‌های زیر با ما تماس بگیرید یا فرم کنار صفحه را پر کنید.
+      </p>
+
+      <ul class="info-list">
+        <li class="info-item">
+          <span class="info-icon"><i class="fa-solid fa-phone"></i></span>
+          <span class="info-text">
+            <strong>تماس تلفنی</strong>
+            <a href="tel:+989116314581" dir="ltr">0911 631 4581</a>
+          </span>
+        </li>
+
+        <li class="info-item">
+          <span class="info-icon"><i class="fa-solid fa-location-dot"></i></span>
+          <span class="info-text">
+            <strong>آدرس ما</strong>
+            <span>مازندران</span>
+          </span>
+        </li>
+
+        <li class="info-item">
+          <span class="info-icon"><i class="fa-regular fa-clock"></i></span>
+          <span class="info-text">
+            <strong>ساعات پاسخ‌گویی</strong>
+            <span>همه روزه، ۲۴ ساعته پشتیبانی آنلاین</span>
+          </span>
+        </li>
+      </ul>
+
+      <div class="social-row">
+        <span class="social-label">ما را دنبال کنید</span>
+        <div class="social-icons">
+          <a href="#" aria-label="توییتر آبان بیوتیک"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" aria-label="اینستاگرام آبان بیوتیک"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="تلگرام آبان بیوتیک"><i class="fa-brands fa-telegram"></i></a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- بخش فرم تماس و نقشه -->
+  <section class="form-map-section">
+
+    <div class="contact-form-card">
+      <h2>پیام خود را برای ما بفرستید</h2>
+      <p class="form-sub">فرم زیر را پر کنید، در کمتر از ۲۴ ساعت پاسخ شما را می‌دهیم.</p>
+
+      <form id="contactForm" novalidate>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="fullName">نام و نام خانوادگی</label>
+            <input type="text" id="fullName" name="fullName" placeholder="مثلاً علی رضایی" required>
+            <span class="field-error" data-error-for="fullName"></span>
+          </div>
+
+          <div class="form-field">
+            <label for="phone">شماره موبایل</label>
+            <input type="tel" id="phone" name="phone" placeholder="۰912xxxxxxx" dir="ltr" required>
+            <span class="field-error" data-error-for="phone"></span>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="email">ایمیل <span class="optional">(اختیاری)</span></label>
+            <input type="email" id="email" name="email" placeholder="example@mail.com" dir="ltr">
+            <span class="field-error" data-error-for="email"></span>
+          </div>
+
+          <div class="form-field">
+            <label for="subject">موضوع پیام</label>
+            <select id="subject" name="subject" required>
+              <option value="" selected disabled>یک مورد را انتخاب کنید</option>
+              <option value="order">پیگیری سفارش</option>
+              <option value="product">سوال درباره محصولات</option>
+              <option value="cooperation">پیشنهاد همکاری</option>
+              <option value="other">سایر موارد</option>
+            </select>
+            <span class="field-error" data-error-for="subject"></span>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="message">متن پیام</label>
+          <textarea id="message" name="message" rows="5" placeholder="پیام خود را اینجا بنویسید..." required></textarea>
+          <span class="field-error" data-error-for="message"></span>
+        </div>
+
+        <button type="submit" class="submit-btn">
+          <span>ارسال پیام</span>
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+
+        <div class="form-success" id="formSuccess" role="status">
+          <i class="fa-solid fa-circle-check"></i>
+          <span>پیام شما با موفقیت ارسال شد. به‌زودی با شما تماس می‌گیریم.</span>
+        </div>
+      </form>
+    </div>
+
+    <div class="map-card">
+      <h2 class="map-card-title">چرا آبان بیوتیک؟</h2>
+
+      <div class="quick-facts">
+        <div class="fact">
+          <i class="fa-solid fa-headset"></i>
+          <div>
+            <strong>پشتیبانی ۲۴ ساعته</strong>
+            <span>در تمام روزهای هفته</span>
+          </div>
+        </div>
+        <div class="fact">
+          <i class="fa-solid fa-truck-fast"></i>
+          <div>
+            <strong>ارسال سریع</strong>
+            <span>تحویل فوری همان روز</span>
+          </div>
+        </div>
+        <div class="fact">
+          <i class="fa-solid fa-shield-halved"></i>
+          <div>
+            <strong>ضمانت اصالت کالا</strong>
+            <span>۷ روز ضمانت بازگشت</span>
+          </div>
+        </div>
+        <div class="fact">
+          <i class="fa-solid fa-leaf"></i>
+          <div>
+            <strong>محصولات ۱۰۰٪ ارگانیک</strong>
+            <span>بدون هیچ ماده افزودنی</span>
+          </div>
+        </div>
+        <div class="fact">
+          <i class="fa-brands fa-instagram"></i>
+          <div>
+            <strong>پاسخگویی در اینستاگرام</strong>
+            <span>از طریق دایرکت هم در دسترسیم</span>
+          </div>
+        </div>
+        <div class="fact">
+          <i class="fa-solid fa-box-open"></i>
+          <div>
+            <strong>بسته‌بندی بهداشتی</strong>
+            <span>حفظ تازگی و کیفیت محصول</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- سوالات متداول -->
+  <section class="faq-section">
+    <h2>سوالات پرتکرار</h2>
+    <div class="faq-list" id="faqList">
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>چقدر طول می‌کشد تا به پیام من پاسخ داده شود؟</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <p>تیم پشتیبانی آبان بیوتیک معمولاً در کمتر از ۲۴ ساعت به پیام‌های ارسالی از طریق فرم تماس یا تلفن پاسخ می‌دهد.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>آیا امکان تحویل حضوری سفارش وجود دارد؟</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <p>خیر، در حال حاضر امکان تحویل حضوری وجود ندارد. فروش محصولات آبان بیوتیک فقط از طریق صفحه اینستاگرام و همین وب‌سایت انجام می‌شود.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>آیا از طریق دایرکت اینستاگرام هم پاسخگو هستید؟</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-answer">
+          <p>بله، علاوه بر فرم تماس و شماره تلفن، می‌توانید از طریق دایرکت پیج اینستاگرام آبان بیوتیک هم با ما در ارتباط باشید و سوالات خود را بپرسید.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<script src="./content.js"></script>
+</body>
+</html>
